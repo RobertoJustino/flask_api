@@ -1,11 +1,13 @@
-from flask import Flask
+from flask import Flask, render_template
 app = Flask(__name__)
 
 @app.route("/")
 def index():
- return "hello world!"
+    return render_template('layout.html')
+
 if __name__ == '__main__':
     app.run(debug=True)
+           
     
 @app.route('/about')
 def about():
@@ -15,16 +17,21 @@ def about():
 def urls():
     return "".format(url_for("about"))
 
-@app.route('/, methods=["GET", "POST"]')
-def index():
-    response = get_a_response()
-    return response
-           
-from flask import request
+@app.route('/api/books')
+def about():
+    return book
 
-@app.route('/login', methods=['GET', 'POST'])
-def login():
-    if request.method == 'POST':
-        return do_the_login()
-    else:
-        return show_the_login_form()
+@app.route('/urls')
+def urls():
+    return "".format(url_for("books"))
+
+book=[
+	{
+		'id':1,
+		'titre' : 'un titre',
+	},
+	{
+		'id':2,
+		'titre': 'un autre titre random',
+	}
+]
