@@ -1,25 +1,19 @@
-from flask import Flask, render_template
+from flask import Flask, render_template, jsonify, url_for
 app = Flask(__name__)
+
 
 @app.route("/")
 def index():
     return render_template('layout.html')
-
-if __name__ == '__main__':
-    app.run(debug=True)
-           
-    
-@app.route('/about')
-def about():
-    return 'The about page'
-
-@app.route('/urls')
-def urls():
-    return "".format(url_for("about"))
-
+          
 @app.route('/api/books')
-def about():
-    return book
+def books():
+    return jsonify(book)
+
+@app.route('/api/books/<int:id>')
+def book(id):
+    return ""
+        
 
 @app.route('/urls')
 def urls():
@@ -35,3 +29,7 @@ book=[
 		'titre': 'un autre titre random',
 	}
 ]
+
+
+if __name__ == '__main__':
+    app.run(debug=True)
