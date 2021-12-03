@@ -16,9 +16,8 @@ VOLUME permet de définir les volumes utilisables ;
 
 CMD permet de définir la commande par défaut lors de l’exécution de vos conteneurs Docker.
 
-Une image peut instancier plusieurs conteneurs 
 
-Liste des commandes Docker
+## Liste des commandes Docker
 
 Construire une image docker (sert aussi à mettre une nouvelle version de l'app)
 docker build -t flask_api .
