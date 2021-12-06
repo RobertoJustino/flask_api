@@ -47,4 +47,4 @@ Monter un volume.
 Sert à run l'application sans la rebuild.
 Le docker container va chercher en local notre application directement.
 - docker run -p 3000:3000 -v /app/ -v$(pwd):/app <image_id>
- docker run -d -v /app/ -v $(pwd):/app flask_api 
+- docker run -d -v /app/ -v $(pwd):/app flask_api 
