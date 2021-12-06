@@ -43,6 +43,8 @@ Sert à lancer une commande dans un container déjà lancer
  - docker exec -it <container id> <command> 
 
 Monter un volume.
+- docker volume create app
 Sert à run l'application sans la rebuild.
 Le docker container va chercher en local notre application directement.
 - docker run -p 3000:3000 -v /app/ -v$(pwd):/app <image_id>
+ docker run -d -v /app/ -v $(pwd):/app flask_api 
