@@ -25,6 +25,9 @@ Construire une image docker (sert aussi à mettre une nouvelle version de l'app)
 Lance l'app:
 - docker run flask_api
 
+Voir les images:
+ - docker images
+
 Erreur quand un port est déjà alloué, remplacer l'ancien container :
 
 Récupère l'id d'un container : 
