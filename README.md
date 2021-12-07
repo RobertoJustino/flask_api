@@ -54,3 +54,14 @@ Le docker container va chercher en local notre application directement.
  
 - docker run -p 3000:3000 -v /app/ -v$(pwd):/app <image_id>
 - docker run -d -v /app/ -v $(pwd):/app flask_api 
+ 
+ # Lancer le projet
+ 
+ - Télécharger les fichiers
+ - Extraire dans un dossier vide le zip
+ - Ouvrir un terminal depuis ce dossier 
+ - Construire une image avec docker : docker build . -t api-test
+ - Lancer l'app : docker run api-test
+ - Lancer l'app avec un volume : docker volume create app puis docker run -v /app/ -v $(pwd):/app api-test 
+ 
+ 
