@@ -20,18 +20,18 @@ CMD permet de définir la commande par défaut lors de l’exécution de vos con
 ## Liste des commandes Docker
 
 Construire une image docker (sert aussi à mettre une nouvelle version de l'app)
- - docker build -t flask_api .
-
-Lance l'app:
-- docker run flask_api
+ - docker build . -t flask_api:01
 
 Voir les images:
  - docker images
 
+Lance l'app:
+- docker run -p cont:machineLocal -it flask_api
+
 Erreur quand un port est déjà alloué, remplacer l'ancien container :
 
-Récupère l'id d'un container : 
-- docker ps
+Affcihe les processus / les containers : 
+- docker ps -a (si le container n'est pas run, les processus cachés)
 
 Stop un container :
 - docker stop <the_container_id>
